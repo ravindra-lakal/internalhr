@@ -54,7 +54,8 @@ function make_relieving_document (frm) {
 	
 }
 frappe.ui.form.on("Offer Letter","monthly_salary",function(frm){
-	doc=frm.doc;
+
+doc=frm.doc;
 	  var gross=doc.monthly_salary;
 	  var cl=doc.earnings ||[];
 
@@ -67,6 +68,28 @@ frappe.ui.form.on("Offer Letter","monthly_salary",function(frm){
 	      if(cl[i].e_type=='Others') cl[i].modified_value = gross*0.142;
 	  }
 	  refresh_field('earnings');
+
 	})
 
+frappe.ui.form.on("Offer Letter","onload",function(frm){
+	
+	doc=frm.doc;
+	  
+	  var cl=doc.earnings ;
+	  
+	  for(var i = 0; i <6; i++){
+	  	 var earning= frappe.model.add_child(doc, "Salary Structure Earning", "earnings");
+	  	 if (i==0)earning.e_type="Basic"
+	  	 	 if (i==1)earning.e_type="House Rent Allowance"
+	  	 	 	 if (i==2)earning.e_type="Medical Allowance"
+	  	 	 	 	 if (i==3)earning.e_type="Convayance Allowance"
+	  	 	 	 	 	 if (i==4)earning.e_type="Lunch Allowance"
+	  	 	 	 	 	 	 if (i==5)earning.e_type="Others"
 
+}
+
+ 
+	   
+	  
+	  refresh_field('earnings');
+	})
