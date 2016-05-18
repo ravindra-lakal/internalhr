@@ -1,0 +1,227 @@
+[
+ {
+  "docstatus": 0, 
+  "doctype": "Workflow State", 
+  "icon": "", 
+  "modified": "2016-05-14 11:47:58.052189", 
+  "name": "Request for Approval", 
+  "style": "Primary", 
+  "workflow_state_name": "Request for Approval"
+ }, 
+ {
+  "docstatus": 0, 
+  "doctype": "Workflow State", 
+  "icon": "", 
+  "modified": "2016-05-14 11:55:18.522048", 
+  "name": "Rejected by HR manager", 
+  "style": "Info", 
+  "workflow_state_name": "Rejected by HR manager"
+ }, 
+ {
+  "docstatus": 0, 
+  "doctype": "Workflow State", 
+  "icon": "", 
+  "modified": "2016-05-14 11:56:26.132780", 
+  "name": "Approved by HR Manager", 
+  "style": "Success", 
+  "workflow_state_name": "Approved by HR Manager"
+ }, 
+ {
+  "docstatus": 0, 
+  "doctype": "Workflow State", 
+  "icon": "", 
+  "modified": "2016-05-14 11:58:12.622121", 
+  "name": "Canceled by HR manager", 
+  "style": "Inverse", 
+  "workflow_state_name": "Canceled by HR manager"
+ }, 
+ {
+  "docstatus": 0, 
+  "doctype": "Workflow State", 
+  "icon": "question-sign", 
+  "modified": "2016-04-25 15:07:04.033429", 
+  "name": "Pending", 
+  "style": "", 
+  "workflow_state_name": "Pending"
+ }, 
+ {
+  "docstatus": 0, 
+  "doctype": "Workflow State", 
+  "icon": "ok-sign", 
+  "modified": "2016-04-25 15:07:04.035488", 
+  "name": "Approved", 
+  "style": "Success", 
+  "workflow_state_name": "Approved"
+ }, 
+ {
+  "docstatus": 0, 
+  "doctype": "Workflow State", 
+  "icon": "remove", 
+  "modified": "2016-04-25 15:07:04.036999", 
+  "name": "Rejected", 
+  "style": "Danger", 
+  "workflow_state_name": "Rejected"
+ }, 
+ {
+  "docstatus": 0, 
+  "doctype": "Workflow State", 
+  "icon": "", 
+  "modified": "2016-04-26 17:38:31.444347", 
+  "name": "Accept", 
+  "style": "Primary", 
+  "workflow_state_name": "Accept"
+ }, 
+ {
+  "docstatus": 0, 
+  "doctype": "Workflow State", 
+  "icon": "", 
+  "modified": "2016-04-26 17:40:35.496300", 
+  "name": "Applied", 
+  "style": "", 
+  "workflow_state_name": "Applied"
+ }, 
+ {
+  "docstatus": 0, 
+  "doctype": "Workflow State", 
+  "icon": "", 
+  "modified": "2016-04-26 18:30:58.988902", 
+  "name": "Approved by Admin Officer", 
+  "style": "Success", 
+  "workflow_state_name": "Approved by Admin Officer"
+ }, 
+ {
+  "docstatus": 0, 
+  "doctype": "Workflow State", 
+  "icon": "", 
+  "modified": "2016-04-26 18:37:04.711388", 
+  "name": "Approved By Manager", 
+  "style": "Success", 
+  "workflow_state_name": "Approved By Manager"
+ }, 
+ {
+  "docstatus": 0, 
+  "doctype": "Workflow State", 
+  "icon": "", 
+  "modified": "2016-04-26 18:41:35.260790", 
+  "name": "Rejected by Manager", 
+  "style": "Warning", 
+  "workflow_state_name": "Rejected by Manager"
+ }, 
+ {
+  "docstatus": 0, 
+  "doctype": "Workflow State", 
+  "icon": "", 
+  "modified": "2016-04-26 18:47:51.142567", 
+  "name": "Rejected By Accounts Manager", 
+  "style": "Danger", 
+  "workflow_state_name": "Rejected By Accounts Manager"
+ }, 
+ {
+  "docstatus": 0, 
+  "doctype": "Workflow State", 
+  "icon": "", 
+  "modified": "2016-04-26 18:48:59.343202", 
+  "name": "Rejected By Accounts Officer", 
+  "style": "Danger", 
+  "workflow_state_name": "Rejected By Accounts Officer"
+ }, 
+ {
+  "docstatus": 0, 
+  "doctype": "Workflow State", 
+  "icon": "", 
+  "modified": "2016-04-26 18:50:51.379379", 
+  "name": "Approved by Accounts Officer", 
+  "style": "Success", 
+  "workflow_state_name": "Approved by Accounts Officer"
+ }, 
+ {
+  "docstatus": 0, 
+  "doctype": "Workflow State", 
+  "icon": "", 
+  "modified": "2016-04-26 19:06:57.018766", 
+  "name": "Rejected by Admin Officer", 
+  "style": "Warning", 
+  "workflow_state_name": "Rejected by Admin Officer"
+ }, 
+ {
+  "docstatus": 0, 
+  "doctype": "Workflow State", 
+  "icon": "", 
+  "modified": "2016-04-30 12:20:49.693662", 
+  "name": "Apply", 
+  "style": "Primary", 
+  "workflow_state_name": "Apply"
+ }, 
+ {
+  "docstatus": 0, 
+  "doctype": "Workflow State", 
+  "icon": "", 
+  "modified": "2016-04-30 12:35:18.306011", 
+  "name": "Rejected by Admin Officer and Assigned Back To Employee", 
+  "style": "Info", 
+  "workflow_state_name": "Rejected by Admin Officer and Assigned Back To Employee"
+ }, 
+ {
+  "docstatus": 0, 
+  "doctype": "Workflow State", 
+  "icon": "", 
+  "modified": "2016-04-30 12:42:30.074880", 
+  "name": "Rejected By Manager Assigned Back to Admin Officer", 
+  "style": "", 
+  "workflow_state_name": "Rejected By Manager Assigned Back to Admin Officer "
+ }, 
+ {
+  "docstatus": 0, 
+  "doctype": "Workflow State", 
+  "icon": "", 
+  "modified": "2016-04-30 13:00:06.770848", 
+  "name": "Rejected by Accounts Officer assigned back to Manager", 
+  "style": "Info", 
+  "workflow_state_name": "Rejected by Accounts Officer assigned back to Manager"
+ }, 
+ {
+  "docstatus": 0, 
+  "doctype": "Workflow State", 
+  "icon": "", 
+  "modified": "2016-04-30 13:24:21.370684", 
+  "name": "Reapplied", 
+  "style": "Primary", 
+  "workflow_state_name": "Reapplied"
+ }, 
+ {
+  "docstatus": 0, 
+  "doctype": "Workflow State", 
+  "icon": "", 
+  "modified": "2016-04-30 13:25:09.065240", 
+  "name": "Reapplied by Employee", 
+  "style": "Primary", 
+  "workflow_state_name": "Reapplied by Employee"
+ }, 
+ {
+  "docstatus": 0, 
+  "doctype": "Workflow State", 
+  "icon": "", 
+  "modified": "2016-04-30 13:26:30.711309", 
+  "name": "Reapplied by Admin Officer", 
+  "style": "Primary", 
+  "workflow_state_name": "Reapplied by Admin Officer"
+ }, 
+ {
+  "docstatus": 0, 
+  "doctype": "Workflow State", 
+  "icon": "", 
+  "modified": "2016-04-30 13:28:16.519502", 
+  "name": "Reapplied by Manager", 
+  "style": "Primary", 
+  "workflow_state_name": "Reapplied by Manager"
+ }, 
+ {
+  "docstatus": 0, 
+  "doctype": "Workflow State", 
+  "icon": "", 
+  "modified": "2016-05-03 11:16:12.000595", 
+  "name": "Canceled", 
+  "style": "Inverse", 
+  "workflow_state_name": "Canceled"
+ }
+]

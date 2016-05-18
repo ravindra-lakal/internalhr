@@ -33,3 +33,40 @@ frappe.ui.form.on("Salary Structure","ctc",function(frm){
 	  }
 	  refresh_field('deductions');
 })
+frappe.ui.form.on('Employee', {
+	refresh: function(frm) {
+		if((!frm.doc.__islocal) && (frm.doc.relieving_date)) {
+			frm.add_custom_button(__('Make Relieving Documents'),
+				function() {
+					make_relieving_document(frm)
+				}
+			);
+		}
+
+
+	}
+});
+function make_relieving_document (frm) {
+	frappe.model.open_mapped_doc({
+		method: "internalhr.custom_py_method.make_relieving_document",
+		frm: frm
+	});
+	
+}
+frappe.ui.form.on("Offer Letter","monthly_salary",function(frm){
+	doc=frm.doc;
+	  var gross=doc.monthly_salary;
+	  var cl=doc.earnings ||[];
+
+	  for(var i = 0; i < cl.length; i++){
+	      if(cl[i].e_type=='Basic') cl[i].modified_value = gross*0.38;
+	      if(cl[i].e_type=='House Rent Allowance') cl[i].modified_value = gross*0.266;
+	      if(cl[i].e_type=='Medical Allowance') cl[i].modified_value = gross*0.076;
+	      if(cl[i].e_type=='Convayance Allowance') cl[i].modified_value=gross*0.076;
+	      if(cl[i].e_type=='Lunch Allowance') cl[i].modified_value=gross*0.06;
+	      if(cl[i].e_type=='Others') cl[i].modified_value = gross*0.142;
+	  }
+	  refresh_field('earnings');
+	})
+
+

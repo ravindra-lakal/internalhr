@@ -1,0 +1,368 @@
+[
+ {
+  "docstatus": 0, 
+  "doctype": "Workflow", 
+  "document_type": "Offer Letter", 
+  "is_active": 1, 
+  "modified": "2016-05-14 13:33:51.448601", 
+  "name": "Offer Letter", 
+  "states": [
+   {
+    "allow_edit": "Admin Officer", 
+    "doc_status": "0", 
+    "message": null, 
+    "state": "Request for Approval", 
+    "update_field": null, 
+    "update_value": null
+   }, 
+   {
+    "allow_edit": "HR Manager", 
+    "doc_status": "0", 
+    "message": null, 
+    "state": "Applied", 
+    "update_field": null, 
+    "update_value": null
+   }, 
+   {
+    "allow_edit": "Admin Officer", 
+    "doc_status": "0", 
+    "message": null, 
+    "state": "Rejected by HR manager", 
+    "update_field": null, 
+    "update_value": null
+   }, 
+   {
+    "allow_edit": "HR Manager", 
+    "doc_status": "1", 
+    "message": null, 
+    "state": "Approved by HR Manager", 
+    "update_field": null, 
+    "update_value": null
+   }, 
+   {
+    "allow_edit": "HR Manager", 
+    "doc_status": "2", 
+    "message": null, 
+    "state": "Canceled by HR manager", 
+    "update_field": null, 
+    "update_value": null
+   }
+  ], 
+  "transitions": [
+   {
+    "action": "Apply", 
+    "allowed": "Admin Officer", 
+    "next_state": "Applied", 
+    "state": "Request for Approval"
+   }, 
+   {
+    "action": "Approve", 
+    "allowed": "HR Manager", 
+    "next_state": "Approved by HR Manager", 
+    "state": "Applied"
+   }, 
+   {
+    "action": "Reject", 
+    "allowed": "HR Manager", 
+    "next_state": "Rejected by HR manager", 
+    "state": "Applied"
+   }, 
+   {
+    "action": "Cancel", 
+    "allowed": "HR Manager", 
+    "next_state": "Canceled by HR manager", 
+    "state": "Approved by HR Manager"
+   }, 
+   {
+    "action": "Apply", 
+    "allowed": "Admin Officer", 
+    "next_state": "Applied", 
+    "state": "Rejected by HR manager"
+   }
+  ], 
+  "workflow_name": "Offer Letter", 
+  "workflow_state_field": "workflow_state"
+ }, 
+ {
+  "docstatus": 0, 
+  "doctype": "Workflow", 
+  "document_type": "Relieving Document", 
+  "is_active": 1, 
+  "modified": "2016-05-14 18:24:49.272060", 
+  "name": "Rel", 
+  "states": [
+   {
+    "allow_edit": "Admin Officer", 
+    "doc_status": "0", 
+    "message": null, 
+    "state": "Request for Approval", 
+    "update_field": null, 
+    "update_value": null
+   }, 
+   {
+    "allow_edit": "HR Manager", 
+    "doc_status": "0", 
+    "message": null, 
+    "state": "Applied", 
+    "update_field": null, 
+    "update_value": null
+   }, 
+   {
+    "allow_edit": "Admin Officer", 
+    "doc_status": "0", 
+    "message": null, 
+    "state": "Rejected by HR manager", 
+    "update_field": null, 
+    "update_value": null
+   }, 
+   {
+    "allow_edit": "HR Manager", 
+    "doc_status": "1", 
+    "message": null, 
+    "state": "Approved by HR Manager", 
+    "update_field": null, 
+    "update_value": null
+   }, 
+   {
+    "allow_edit": "HR Manager", 
+    "doc_status": "2", 
+    "message": null, 
+    "state": "Canceled by HR manager", 
+    "update_field": null, 
+    "update_value": null
+   }
+  ], 
+  "transitions": [
+   {
+    "action": "Apply", 
+    "allowed": "Admin Officer", 
+    "next_state": "Applied", 
+    "state": "Request for Approval"
+   }, 
+   {
+    "action": "Approve", 
+    "allowed": "HR Manager", 
+    "next_state": "Approved by HR Manager", 
+    "state": "Applied"
+   }, 
+   {
+    "action": "Reject", 
+    "allowed": "HR Manager", 
+    "next_state": "Rejected by HR manager", 
+    "state": "Applied"
+   }, 
+   {
+    "action": "Cancel", 
+    "allowed": "HR Manager", 
+    "next_state": "Canceled by HR manager", 
+    "state": "Approved by HR Manager"
+   }, 
+   {
+    "action": "Apply", 
+    "allowed": "Admin Officer", 
+    "next_state": "Applied", 
+    "state": "Rejected by HR manager"
+   }
+  ], 
+  "workflow_name": "Rel", 
+  "workflow_state_field": "workflow_state"
+ }, 
+ {
+  "docstatus": 0, 
+  "doctype": "Workflow", 
+  "document_type": "Voucher", 
+  "is_active": 1, 
+  "modified": "2016-05-03 11:21:01.267595", 
+  "name": "Voucher Workflow", 
+  "states": [
+   {
+    "allow_edit": "Employee", 
+    "doc_status": "0", 
+    "message": null, 
+    "state": "Applied", 
+    "update_field": "status", 
+    "update_value": null
+   }, 
+   {
+    "allow_edit": "Manager", 
+    "doc_status": "0", 
+    "message": null, 
+    "state": "Approved by Admin Officer", 
+    "update_field": null, 
+    "update_value": null
+   }, 
+   {
+    "allow_edit": "Employee", 
+    "doc_status": "0", 
+    "message": null, 
+    "state": "Rejected by Admin Officer and Assigned Back To Employee", 
+    "update_field": null, 
+    "update_value": null
+   }, 
+   {
+    "allow_edit": "Accounts Officer", 
+    "doc_status": "0", 
+    "message": null, 
+    "state": "Approved By Manager", 
+    "update_field": null, 
+    "update_value": null
+   }, 
+   {
+    "allow_edit": "Admin Officer", 
+    "doc_status": "0", 
+    "message": null, 
+    "state": "Rejected By Manager Assigned Back to Admin Officer", 
+    "update_field": null, 
+    "update_value": null
+   }, 
+   {
+    "allow_edit": "Accounts Officer", 
+    "doc_status": "0", 
+    "message": null, 
+    "state": "Approved by Accounts Officer", 
+    "update_field": "status", 
+    "update_value": null
+   }, 
+   {
+    "allow_edit": "Manager", 
+    "doc_status": "0", 
+    "message": null, 
+    "state": "Rejected by Accounts Officer assigned back to Manager", 
+    "update_field": null, 
+    "update_value": null
+   }, 
+   {
+    "allow_edit": "Admin Officer", 
+    "doc_status": "0", 
+    "message": null, 
+    "state": "Reapplied by Admin Officer", 
+    "update_field": null, 
+    "update_value": null
+   }, 
+   {
+    "allow_edit": "Employee", 
+    "doc_status": "0", 
+    "message": null, 
+    "state": "Reapplied by Employee", 
+    "update_field": null, 
+    "update_value": null
+   }, 
+   {
+    "allow_edit": "Manager", 
+    "doc_status": "0", 
+    "message": null, 
+    "state": "Reapplied by Manager", 
+    "update_field": null, 
+    "update_value": null
+   }, 
+   {
+    "allow_edit": "Accounts Officer", 
+    "doc_status": "1", 
+    "message": null, 
+    "state": "Approved", 
+    "update_field": null, 
+    "update_value": null
+   }
+  ], 
+  "transitions": [
+   {
+    "action": "Approve", 
+    "allowed": "Admin Officer", 
+    "next_state": "Approved by Admin Officer", 
+    "state": "Applied"
+   }, 
+   {
+    "action": "Reject", 
+    "allowed": "Admin Officer", 
+    "next_state": "Rejected by Admin Officer and Assigned Back To Employee", 
+    "state": "Applied"
+   }, 
+   {
+    "action": "Apply", 
+    "allowed": "Employee", 
+    "next_state": "Reapplied by Employee", 
+    "state": "Rejected by Admin Officer and Assigned Back To Employee"
+   }, 
+   {
+    "action": "Reject", 
+    "allowed": "Manager", 
+    "next_state": "Rejected By Manager Assigned Back to Admin Officer", 
+    "state": "Approved by Admin Officer"
+   }, 
+   {
+    "action": "Approve", 
+    "allowed": "Manager", 
+    "next_state": "Approved By Manager", 
+    "state": "Approved by Admin Officer"
+   }, 
+   {
+    "action": "Approve", 
+    "allowed": "Accounts Officer", 
+    "next_state": "Approved by Accounts Officer", 
+    "state": "Approved By Manager"
+   }, 
+   {
+    "action": "Apply", 
+    "allowed": "Admin Officer", 
+    "next_state": "Reapplied by Admin Officer", 
+    "state": "Rejected By Manager Assigned Back to Admin Officer"
+   }, 
+   {
+    "action": "Approve", 
+    "allowed": "Accounts Officer", 
+    "next_state": "Approved", 
+    "state": "Approved by Accounts Officer"
+   }, 
+   {
+    "action": "Apply", 
+    "allowed": "Manager", 
+    "next_state": "Reapplied by Manager", 
+    "state": "Rejected by Accounts Officer assigned back to Manager"
+   }, 
+   {
+    "action": "Approve", 
+    "allowed": "Admin Officer", 
+    "next_state": "Approved by Admin Officer", 
+    "state": "Reapplied by Employee"
+   }, 
+   {
+    "action": "Approve", 
+    "allowed": "Manager", 
+    "next_state": "Approved By Manager", 
+    "state": "Reapplied by Admin Officer"
+   }, 
+   {
+    "action": "Approve", 
+    "allowed": "Accounts Officer", 
+    "next_state": "Approved by Accounts Officer", 
+    "state": "Reapplied by Manager"
+   }, 
+   {
+    "action": "Reject", 
+    "allowed": "Admin Officer", 
+    "next_state": "Rejected by Admin Officer and Assigned Back To Employee", 
+    "state": "Reapplied by Employee"
+   }, 
+   {
+    "action": "Reject", 
+    "allowed": "Manager", 
+    "next_state": "Rejected By Manager Assigned Back to Admin Officer", 
+    "state": "Reapplied by Admin Officer"
+   }, 
+   {
+    "action": "Reject", 
+    "allowed": "Accounts Officer", 
+    "next_state": "Rejected by Accounts Officer assigned back to Manager", 
+    "state": "Reapplied by Manager"
+   }, 
+   {
+    "action": "Reject", 
+    "allowed": "Accounts Officer", 
+    "next_state": "Rejected by Accounts Officer assigned back to Manager", 
+    "state": "Approved By Manager"
+   }
+  ], 
+  "workflow_name": "Voucher Workflow", 
+  "workflow_state_field": "workflow_state"
+ }
+]

@@ -114,6 +114,7 @@ doc_events = {
 		# "on_cancel": "method",
 		# "on_trash": "method"
 	}
+	
 }
 
-fixtures=["Custom Field","Property Setter"]
+fixtures=["Custom Field","Property Setter","Role","Workflow","Workflow State","Workflow Action","Print Format"]
