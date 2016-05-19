@@ -76,6 +76,8 @@ frappe.ui.form.on("Offer Letter","onload",function(frm){
 	doc=frm.doc;
 	  
 	  var cl=doc.earnings ;
+	  if (frm.doc.__islocal==1 && cl==null)
+	  {
 	  
 	  for(var i = 0; i <6; i++){
 	  	 var earning= frappe.model.add_child(doc, "Salary Structure Earning", "earnings");
@@ -85,7 +87,7 @@ frappe.ui.form.on("Offer Letter","onload",function(frm){
 	  	 	 	 	 if (i==3)earning.e_type="Convayance Allowance"
 	  	 	 	 	 	 if (i==4)earning.e_type="Lunch Allowance"
 	  	 	 	 	 	 	 if (i==5)earning.e_type="Others"
-
+}
 }
 
  
