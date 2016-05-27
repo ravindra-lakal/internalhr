@@ -26,7 +26,10 @@ def make_relieving_document(source_name, target_doc=None):
 				}
 		},target_doc, set_missing_values)
 	return doc
-
+@frappe.whitelist()
+def get_offer_terms():
+	offer_terms=frappe.get_all("Offer Terms",fields=["description"] )
+	return offer_terms
 
 		
 	

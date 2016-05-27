@@ -36,6 +36,7 @@ frappe.ui.form.on("Salary Structure","ctc",function(frm){
 frappe.ui.form.on('Employee', {
 	refresh: function(frm) {
 		if((!frm.doc.__islocal) && (frm.doc.relieving_date)) {
+			
 			frm.add_custom_button(__('Make Relieving Documents'),
 				function() {
 					make_relieving_document(frm)
@@ -78,20 +79,43 @@ frappe.ui.form.on("Offer Letter","onload",function(frm){
 	  var cl=doc.earnings ;
 	  if (frm.doc.__islocal==1 && cl==null)
 	  {
-	  
+	   var mapper = {0:"Basic", 1:"House Rent Allowance", 2:"Medical Allowance", 3:"Convayance Allowance", 4:"Lunch Allowance", 5:"Others"}
 	  for(var i = 0; i <6; i++){
 	  	 var earning= frappe.model.add_child(doc, "Salary Structure Earning", "earnings");
-	  	 if (i==0)earning.e_type="Basic"
-	  	 	 if (i==1)earning.e_type="House Rent Allowance"
-	  	 	 	 if (i==2)earning.e_type="Medical Allowance"
-	  	 	 	 	 if (i==3)earning.e_type="Convayance Allowance"
-	  	 	 	 	 	 if (i==4)earning.e_type="Lunch Allowance"
-	  	 	 	 	 	 	 if (i==5)earning.e_type="Others"
+	  	 earning.e_type = mapper[i]
+	  	 // if (i==0)earning.e_type="Basic"
+	  	 // 	 else if (i==1)earning.e_type="House Rent Allowance"
+	  	 // 	 	 else if (i==2)earning.e_type="Medical Allowance"
+	  	 // 	 	 	 else if (i==3)earning.e_type="Convayance Allowance"
+	  	 // 	 	 	 	 else if (i==4)earning.e_type="Lunch Allowance"
+	  	 // 	 	 	 	 	 else if (i==5)earning.e_type="Others"
 }
 }
+refresh_field('earnings');
+//Returns all the offer terms
+return frappe.call({
+				method: "internalhr.custom_py_method.get_offer_terms",
+				
+				callback: function(r) {
+					if(r.message) {
+						console.log(JSON.stringify(r.message))
+						 if (frm.doc.__islocal==1 && cl==null)
+	  {
+	   
+	  for(var i = r.message.length-1; i>=0; i--){
+	  	 var offer_term= frappe.model.add_child(doc, "Offer Letter Term", "offer_terms");
+	  	 offer_term.value=r.message[i]['description']
+	  	           }
+
+	  	       }
+						
+					}
+					refresh_field('offer_terms');
+				}
+			})
 
  
 	   
 	  
-	  refresh_field('earnings');
+	  
 	})
